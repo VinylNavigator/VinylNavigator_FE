@@ -1,12 +1,13 @@
 import React from 'react'
 import '../styles/forms/forms.css'
 import M from 'materialize-css'
+import axios from 'axios'
 
 export default class Login extends React.Component{
     constructor(){
         super()
         this.state = {
-            user: '',
+            username: '',
             password: ''
         }
     }
@@ -24,28 +25,42 @@ export default class Login extends React.Component{
 
     submitHandler = (e) => {
         e.preventDefault()
-        
+
+        axios.post('https://vinylnavigator.herokuapp.com/api/auth/login', this.state)
+            .then(response => {
+                this.setState({
+                    username: '',
+                    password: ''
+                })
+                localStorage.setItem('token', response.data.token)
+                localStorage.setItem('username', response.data.username)
+                this.props.history.push('/')
+                window.location.reload()
+            })
+            .catch(error => {
+                console.log('There was an error logging the user in', error)
+            })
     }
 
     render(){
         return(
-            <div class="row">
+            <div className="row">
                 <h1 style={{textAlign:'center'}}>Login</h1> 
-                <form onSubmit={this.submitHandler} class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" type="text" class="validate" name='user' value={this.state.user} onChange={this.changeHandler}/>
-                            <label for="email">Username</label>
+                <form onSubmit={this.submitHandler} className="col s12">
+                    <div className="row">
+                        <div className="input-field col s12">
+                            <input id="email" type="text" className="validate" name='username' value={this.state.username} onChange={this.changeHandler}/>
+                            <label htmlFor="email">Username</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="password" type="password" name='password' value={this.state.password} onChange={this.changeHandler} class="validate"/>
-                            <label for="password">Password</label>
+                    <div className="row">
+                        <div className="input-field col s12">
+                            <input id="password" type="password" name='password' value={this.state.password} onChange={this.changeHandler} className="validate"/>
+                            <label htmlFor="password">Password</label>
                         </div>
                     </div>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
+                    <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i className="material-icons right">send</i>
                     </button>
                 </form>
           </div>
