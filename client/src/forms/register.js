@@ -28,7 +28,7 @@ export default class Register extends React.Component{
     submitHandler = (e) => {
         e.preventDefault()
 
-        axios.post('https://vinylnavigator.herokuapp.com/api/auth/register', this.state)
+        axios.post(`${process.env.REACT_APP_REGISTER}`, this.state)
             .then(response => {
                 console.log(response)
                 this.setState({

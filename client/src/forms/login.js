@@ -26,7 +26,7 @@ export default class Login extends React.Component{
     submitHandler = (e) => {
         e.preventDefault()
 
-        axios.post('https://vinylnavigator.herokuapp.com/api/auth/login', this.state)
+        axios.post(`${process.env.REACT_APP_LOGIN}`, this.state)
             .then(response => {
                 this.setState({
                     username: '',
