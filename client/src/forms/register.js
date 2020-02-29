@@ -46,7 +46,7 @@ export default class Register extends React.Component{
 
     render(){
         return(
-            <div className="row">
+            <div className="row form-container-background">
                 <h1 style={{textAlign: 'center'}}>Register</h1> 
                 <form onSubmit={this.submitHandler} className="col s12">
                     <div className="row">
