@@ -5,15 +5,17 @@ import Landing from './landing/landing.js'
 import Register from './forms/register'
 import {Route} from 'react-router-dom'
 import './App.css';
+import AlbumCards from './albums/albumCards'
+
 
 function App() {
   return (
     <div className="App">
         <header className="main-header">
-        <Nav /> 
-        <Route exact path='/' component={Landing} /> 
-        <Route exact path='/register' component={Register} />
-        <Route exact path='/login' component={Login} /> 
+            <Nav /> 
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} /> 
+            <AlbumCards /> 
         </header> 
     </div>
   );

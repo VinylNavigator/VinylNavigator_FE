@@ -1,7 +1,4 @@
 .main-header{
-    background:url(./purple-bubbles.jpg);
-    background-size: cover;
-    background-position: center; 
     min-height: 600px; 
-    
+    background: rgba(0, 0, 0, 0.938); 
 }
