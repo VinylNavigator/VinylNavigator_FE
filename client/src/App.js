@@ -6,6 +6,7 @@ import Register from './forms/register'
 import {Route} from 'react-router-dom'
 import './App.css';
 import AlbumCards from './albums/albumCards'
+import PostAlbum from './forms/post_album'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <Nav /> 
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} /> 
+            <PostAlbum /> 
             <AlbumCards /> 
         </header> 
     </div>
