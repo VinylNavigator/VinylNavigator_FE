@@ -2,6 +2,9 @@
     display: flex; 
     flex-wrap: wrap; 
     color: white; 
+
+    background: black;
+    margin-bottom:15px;
 }
 
 .content-container{
@@ -13,5 +16,9 @@
 }
 
 .image-container{
-    width: 35%; 
+    width: 15%; 
+    max-height: 200px; 
+    
 }
+
+

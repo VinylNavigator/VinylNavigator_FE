@@ -36,7 +36,7 @@ export default class AlbumCards extends React.Component{
                 {this.state.albumCards.map((item, index) => {
                     return <AlbumCard albumCards={item}
                                key={index}
-                               /> 
+                           /> 
                 })}
                 
             </div>

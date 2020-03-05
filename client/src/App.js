@@ -16,7 +16,7 @@ function App() {
             <Nav /> 
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} /> 
-            <PostAlbum /> 
+            <Route exact path='/postAlbum' component={PostAlbum} /> 
             <AlbumCards /> 
         </header> 
     </div>

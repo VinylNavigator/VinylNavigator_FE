@@ -1,14 +1,10 @@
-.sidenav-overlay{
-    background: rgba(0, 0, 0, 0.603)
+nav{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    width: 100%;
+    position: fixed; 
+    background: white; 
 }
 
-
-
-nav i.material-icons{
-    display: inline-block;
-}
-
-.brand-logo{
-    text-align: center; 
-    width: 90%;
-}

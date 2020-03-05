@@ -31,25 +31,9 @@ export default class PostAlbum extends React.Component{
 
     submitHandler = (event) => {
         event.preventDefault()
-        axios.post(`${process.env.REACT_APP_POST_ALBUM}` , this.state)
+        axios.post(`${process.env.REACT_APP_POST_ALBUM}`, this.state)
             .then(response => {
                 console.log(response)
-                this.setState = ({
-                    band: '',
-                    album: '',
-                    year: '',
-                    members: '',
-                    tracks: '',
-                    buzz_track: '',
-                    content: '',
-                    album_image: '',
-                    band_image: '',
-                    link: '',
-                    youtube: '',
-                    genre: '',
-                    keyword: '',
-                    similar: ''
-                })              
             })
             .catch(error => {
                 console.log("There was an error posting your data", error)
@@ -139,14 +123,15 @@ export default class PostAlbum extends React.Component{
                        value={this.state.similar} 
                 />        
                 </div> 
-                <div>   
-                    <textarea name='content'
-                              placeholder='content'
-                              onChange={this.changeHandler}
-                              type='text'
-                              value={this.state.content}
-                    /> 
-                </div> 
+            
+                <textarea name='content'
+                          placeholder='content'
+                          onChange={this.changeHandler}
+                          type='textarea'
+                          
+                          value={this.state.content}
+                /> 
+                 
                 <div> 
                 <button class="btn waves-effect waves-light" type="submit">Submit
                     <i class="material-icons right">send</i>
