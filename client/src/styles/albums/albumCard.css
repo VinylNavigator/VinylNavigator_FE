@@ -1,24 +1,2 @@
-.album-cards-container{
-    display: flex; 
-    flex-wrap: wrap; 
-    color: white; 
-
-    background: black;
-    margin-bottom:15px;
-}
-
-.content-container{
-    display: flex; 
-    flex-wrap: wrap; 
-    flex-direction: column; 
-    width: 60%; 
-    color: white; 
-}
-
-.image-container{
-    width: 15%; 
-    max-height: 200px; 
-    
-}
 
 

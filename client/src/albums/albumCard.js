@@ -8,15 +8,15 @@ export default class AlbumCard extends React.Component{
 
     render(){
         return(
-            <div className='row'>
-                <div className='col s4'>
-                    <img  className='album-image' src={this.props.albumCards.band_image}/> 
-                </div> 
+            <section className='row'>
+            <div className='col s4'> 
+                <img className='album-image' src={this.props.albumCards.band_image}/> 
+            </div>
                 <div className='col s8'>
-                    <h6>This is the description section of the article being posted</h6>
+                    <p>This is the description section of the article being posted</p>
                     <p>Date</p> 
                 </div> 
-            </div> 
+            </section> 
         )
     }
 }

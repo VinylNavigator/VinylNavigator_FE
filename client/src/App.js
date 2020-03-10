@@ -14,6 +14,7 @@ function App() {
     <div className="App">
         <header className="main-header">
             <Nav /> 
+          
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} /> 
             <Route exact path='/postAlbum' component={PostAlbum} /> 
