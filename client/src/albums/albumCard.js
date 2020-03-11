@@ -8,13 +8,21 @@ export default class AlbumCard extends React.Component{
 
     render(){
         return(
-            <section className='row valign-center'>
-                <img className='album-image col s5' src={this.props.albumCards.band_image}/> 
-                <div className='album-card-content col s7'>
-                    <p>This is the description section of the article being posted</p>
-                    <p>Date</p> 
-                </div> 
-            </section> 
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card horizontal">
+                        <div class="card-image center-align valign-wrapper">
+                           <img src={this.props.albumCards.band_image}/>
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                              <span class="card-title">Horizontal</span>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
